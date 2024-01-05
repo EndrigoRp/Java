@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -28,7 +29,18 @@ public class Principal {
         lost.setMinutosPorEp(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos() + " minutos");
 
-        
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("A espada era lei");
+        outroFilme.setAnoDeLancamento(1987);
+        outroFilme.setDuracaoEmMinutos(190);
+
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
+
 
 
     }
