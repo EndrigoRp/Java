@@ -7,6 +7,15 @@ public class Titulo {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
+    private String tipoDeConteudo;
+
+    public String getTipoDeConteudo() {
+        return tipoDeConteudo;
+    }
+
+    public void setTipoDeConteudo(String tipoDeConteudo) {
+        this.tipoDeConteudo = tipoDeConteudo;
+    }
 
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
