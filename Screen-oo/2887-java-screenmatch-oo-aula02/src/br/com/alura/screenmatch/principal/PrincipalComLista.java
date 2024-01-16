@@ -32,7 +32,7 @@ public class PrincipalComLista {
         casaDePapel.avalia(7);
 
 
-        List<Titulo> lista = new LinkedList<>();
+        ArrayList<Titulo> lista = new ArrayList<>();
         lista.add(favorito);
         lista.add(outro);
         lista.add(filmeDoPaulo);
@@ -40,6 +40,9 @@ public class PrincipalComLista {
         lista.add(outroFilme);
         lista.add(lost);
         lista.add(casaDePapel);
+
+        Collections.sort(lista);
+
 
         for (Titulo item: lista) {
             System.out.println("Nome: " + item.getNome() + item.getAnoDeLancamento());
