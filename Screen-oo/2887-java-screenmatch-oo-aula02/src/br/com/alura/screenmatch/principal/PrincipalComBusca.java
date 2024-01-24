@@ -11,7 +11,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Map;
+
 import java.util.Scanner;
 
 public class PrincipalComBusca {
@@ -40,9 +40,16 @@ public class PrincipalComBusca {
 
         System.out.println(meuTituloOmdb);
 
-        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+        try {
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Titulo já convertido");
+            System.out.println(meuTitulo);
 
-        System.out.println("Titulo já convertido");
-        System.out.println(meuTitulo);
+        }catch (NumberFormatException e){
+            System.out.println("Aconteu um erro: ");
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("O programa finalizou corretamente!");
     }
 }

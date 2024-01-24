@@ -10,6 +10,7 @@ public class Titulo implements Comparable<Titulo>{
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
+    @SerializedName("runtime")
     private int duracaoEmMinutos;
     private String tipoDeConteudo;
 
@@ -79,7 +80,7 @@ public class Titulo implements Comparable<Titulo>{
 
     @Override
     public String toString() {
-        return "Titulo = " + nome + '\'' +
+        return "Titulo = " + nome  +
                 ", Ano De Lançamento = " + anoDeLancamento + ", " +
                 "Duração = " + duracaoEmMinutos;
     }
