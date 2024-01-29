@@ -22,9 +22,11 @@ public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner leitura = new Scanner(System.in);
         String busca = "";
+
         List<Titulo> titulos = new ArrayList<>();
 
-        Gson gson = new GsonBuilder()
+        Gson gson = null;
+        gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
                 .create();
@@ -35,7 +37,8 @@ public class PrincipalComBusca {
             System.out.println("Digite um filme para busca: ");
             busca = leitura.nextLine();
 
-            if(busca.equalsIgnoreCase("sair")){
+
+            if (busca.equalsIgnoreCase("sair")) {
                 break;
             }
 
