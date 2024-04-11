@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.model;
+package br.com.alura.ScreenMatch.model;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
@@ -10,23 +10,21 @@ public class Episodio {
     private Double avaliacao;
     private LocalDate dataLancamento;
 
-    public Episodio(Integer numeroTemporada, DadosEpisodio dadosEpisodio) {
+    public Episodio(Integer numeroTemporada, DadosEpisodio dadosEpisodio){
         this.temporada = numeroTemporada;
         this.titulo = dadosEpisodio.titulo();
         this.numeroEpisodio = dadosEpisodio.numero();
 
         try {
             this.avaliacao = Double.valueOf(dadosEpisodio.avaliacao());
-        } catch (NumberFormatException ex) {
+        }catch (NumberFormatException ex){
             this.avaliacao = 0.0;
         }
-
         try {
             this.dataLancamento = LocalDate.parse(dadosEpisodio.dataLancamento());
         } catch (DateTimeParseException ex){
             this.dataLancamento = null;
         }
-
 
     }
 
@@ -72,10 +70,10 @@ public class Episodio {
 
     @Override
     public String toString() {
-        return  "temporada=" + temporada +
+        return "temporada=" + temporada +
                 ", titulo='" + titulo + '\'' +
                 ", numeroEpisodio=" + numeroEpisodio +
                 ", avaliacao=" + avaliacao +
-                ", dataLancamento=" + dataLancamento;
+                ", dataLancamento=" + dataLancamento ;
     }
 }
