@@ -77,7 +77,7 @@ function carregarInfoSerie() {
                     <h2>${data.titulo}</h2>
                     <div class="descricao-texto">
                         <p><b>Média de avaliações:</b> ${data.avaliacao}</p>
-                        <p>${data.sinopse}</p>
+                        
                         <p><b>Estrelando:</b> ${data.atores}</p>
                     </div>
                 </div>
